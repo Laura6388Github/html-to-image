@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "TheSans";
+  src: url("./assets/TheSans-Bold.otf") format("opentype");
+}
+
+body {
+	margin: 0;
+}
+
+.happy_card { 
+	position: relative;
+	height: 100vh;
+  background-image: url('./assets/happy_eid.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: center;
+}
+.downloadText {
+  position: absolute;
+  bottom: 10%;
+	left: 0;
+	right: 0;
+  margin: 0 auto;
+}
+
+.glow-on-hover {
+  position: absolute;
+  bottom: 7%;
+	left: 0;
+	right: 0;
+  margin: 0 auto;
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: black;
+  background: #fff;
+  cursor: pointer;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+/* .glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+} */
+
+.glow-on-hover:active {
+  color:black
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+/* @keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+} */
+
+.input {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  position: absolute;
+  bottom: 45%;
+  margin: 0 auto;
+	height: 20px;
+	width: 200px;
+	border-radius: 20px;
+	border: 1px solid #eee;
+	padding: 10px 20px;
+	opacity: 1;
+	font-family: "TheSans", serif;
+	text-align: center;
+}
+
+input:focus-visible {
+	outline: 1px solid #eee;
+}
+
+p {
+  cursor: pointer;
+  text-align: center;
+}
